@@ -1,11 +1,12 @@
 module ALU (
 	input wire clk,
-	input [31:0] a,
-	input [31:0] b,
+	input [31:0] a, // rs1
+	input [31:0] b, // rs2
 	input [0:0] cin, // also dooubles as Binvert signal
-	input [1:0] operation,
+	input [2:0] operation,
 	input [0:0] Ainvert,
-	output reg [31:0] result
+	output reg [31:0] result,
+	output reg [0:0] less
 
 );
 	wire [31:0] arth_result;
@@ -28,6 +29,7 @@ module ALU (
 	// why do we choose cin?
 		// cin is not actually needed in addition, it is for the lsb and that doesn't actually use the cin symbol
 		
+	assign operation = operation + less;
 	always @(*) begin
 		case (cin)
 			1'b0: arth_b = b; // no change if no cin signal -> no + or -
@@ -50,9 +52,10 @@ module ALU (
 	always @(*) begin
 		case (operation) 
 			// won't the extra 33rd bit be cut off in normal program executions
-			2'b00: result = {1'b0, arth_a & arth_b}; // nor here
-			2'b01: result = {1'b0, arth_a | arth_b}; // nand, both utilise demorgan's law
-			2'b10: result = {arth_cout, arth_result};
+			3'b000: result = {1'b0, arth_a & arth_b}; // nor here
+			3'b001: result = {1'b0, arth_a | arth_b}; // nand, both utilise demorgan's law
+			3'b010: result = {arth_cout, arth_result};
+			3'b011: result = {31'b0, arth_cout};
 		
 		endcase
 	
