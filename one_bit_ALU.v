@@ -25,9 +25,11 @@ module one_bit_ALU (
 			2'b01: result = a | b;
 			2'b10: result = {arth_cout, arth_sum}; // cout will be truncated
 			2'b11: result = 1'b0; // dummy logic here for now
-	
-	
+		
 		endcase
+		cout = arth_cout;
 	end
+	
+	
 	
 	endmodule

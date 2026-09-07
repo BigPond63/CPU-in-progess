@@ -65,6 +65,7 @@ initial begin
 					
 					$display("test: input a: %b, input b: %b, input cin: %b, input op: %b, got: %b, expected: %b", 
 						a, b, cin, operation, result, expected);
+					$display("Counter: %b", count);
 					if (expected != {cout,result}) begin // should be fine for and/or conditions too
 						errors = errors + 1;
 						

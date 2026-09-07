@@ -1,5 +1,5 @@
 Analysis & Elaboration report for GENESIS
-Mon Sep 07 13:28:44 2026
+Mon Sep 07 16:46:53 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,8 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "full_adder:ins0"
-  6. Analysis & Elaboration Messages
+  5. Analysis & Elaboration Messages
 
 
 
@@ -37,7 +36,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon Sep 07 13:28:44 2026       ;
+; Analysis & Elaboration Status      ; Successful - Mon Sep 07 16:46:53 2026       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GENESIS                                     ;
 ; Top-level Entity Name              ; one_bit_ALU                                 ;
@@ -158,22 +157,13 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "full_adder:ins0"                                                                    ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Sep 07 13:28:38 2026
+    Info: Processing started: Mon Sep 07 16:46:38 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GENESIS -c GENESIS --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -193,13 +183,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file one_bit
     Info (12023): Found entity 1: one_bit_ALU_tb File: C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU_tb.v Line: 3
 Info (12127): Elaborating entity "one_bit_ALU" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at one_bit_ALU.v(26): truncated value with size 2 to match size of target (1) File: C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v Line: 26
-Warning (10034): Output port "cout[0]" at one_bit_ALU.v(9) has no driver File: C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v Line: 9
 Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:ins0" File: C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v Line: 20
 Info (12128): Elaborating entity "half_adder" for hierarchy "full_adder:ins0|half_adder:ins0" File: C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v Line: 9
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4723 megabytes
-    Info: Processing ended: Mon Sep 07 13:28:44 2026
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Processing ended: Mon Sep 07 16:46:53 2026
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:27
 
 
