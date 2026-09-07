@@ -1,3 +1,5 @@
+// should be deleted
+
 module ALU (
 	input wire clk,
 	input [31:0] a, // rs1

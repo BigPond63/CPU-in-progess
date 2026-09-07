@@ -1,3 +1,6 @@
+// this file should be deleted
+
+
 module 32bit_ALU (
 	input [31:0] a,
 	input [31:0] b,
@@ -13,7 +16,7 @@ module 32bit_ALU (
 	
 	// loop the ripple carry adder 32x to get the result for add/sub
 	genvar i;
-	for (i=0; i<32; i=i+1) begin // label here?
+	for (i=0; i<32; i=i+1) begin: Label
 		1bit_ALU ins0 (
 			.a(a[i]),
 			.b(b[i]),

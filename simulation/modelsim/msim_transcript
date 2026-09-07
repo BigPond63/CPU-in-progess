@@ -1,0 +1,156 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ae/tcl/vsim/pref.tcl
+# do GENESIS_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ae/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/ziggy/Documents/ECE2072/GENESIS {C:/Users/ziggy/Documents/ECE2072/GENESIS/half_adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:31:46 on Sep 07,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ziggy/Documents/ECE2072/GENESIS" C:/Users/ziggy/Documents/ECE2072/GENESIS/half_adder.v 
+# -- Compiling module half_adder
+# 
+# Top level modules:
+# 	half_adder
+# End time: 13:31:46 on Sep 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ziggy/Documents/ECE2072/GENESIS {C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:31:46 on Sep 07,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ziggy/Documents/ECE2072/GENESIS" C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 13:31:46 on Sep 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/ziggy/Documents/ECE2072/GENESIS {C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:31:46 on Sep 07,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ziggy/Documents/ECE2072/GENESIS" C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v 
+# -- Compiling module one_bit_ALU
+# 
+# Top level modules:
+# 	one_bit_ALU
+# End time: 13:31:46 on Sep 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:32:46 on Sep 07,2026
+# vlog -reportprogress 300 -work work C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 13:32:46 on Sep 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/ziggy/Documents/ECE2072/GENESIS/half_adder.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:32:46 on Sep 07,2026
+# vlog -reportprogress 300 -work work C:/Users/ziggy/Documents/ECE2072/GENESIS/half_adder.v 
+# -- Compiling module half_adder
+# 
+# Top level modules:
+# 	half_adder
+# End time: 13:32:46 on Sep 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:32:46 on Sep 07,2026
+# vlog -reportprogress 300 -work work C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v 
+# -- Compiling module one_bit_ALU
+# 
+# Top level modules:
+# 	one_bit_ALU
+# End time: 13:32:46 on Sep 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:32:46 on Sep 07,2026
+# vlog -reportprogress 300 -work work C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU_tb.v 
+# -- Compiling module one_bit_ALU_tb
+# 
+# Top level modules:
+# 	one_bit_ALU_tb
+# End time: 13:32:46 on Sep 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.one_bit_ALU_tb
+# vsim -gui -l msim_transcript work.one_bit_ALU_tb 
+# Start time: 13:33:12 on Sep 07,2026
+# //  ModelSim - Intel FPGA Edition 10.5b Oct  5 2016
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim - Intel FPGA Edition and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.one_bit_ALU_tb
+# Loading work.one_bit_ALU
+# Loading work.full_adder
+# Loading work.half_adder
+add wave -position insertpoint  \
+sim:/one_bit_ALU_tb/a \
+sim:/one_bit_ALU_tb/b \
+sim:/one_bit_ALU_tb/cin \
+sim:/one_bit_ALU_tb/operation \
+sim:/one_bit_ALU_tb/result \
+sim:/one_bit_ALU_tb/cout \
+sim:/one_bit_ALU_tb/expected \
+sim:/one_bit_ALU_tb/i \
+sim:/one_bit_ALU_tb/j \
+sim:/one_bit_ALU_tb/k \
+sim:/one_bit_ALU_tb/l \
+sim:/one_bit_ALU_tb/count \
+sim:/one_bit_ALU_tb/errors
+run -all
+# test: input a: 1, input b: 0, input cin: 0, input op: 00, got: 0, expected: 00
+# test: input a: 0, input b: 0, input cin: 0, input op: 00, got: 0, expected: 00
+# test: input a: 1, input b: 1, input cin: 0, input op: 00, got: 1, expected: 01
+# test: input a: 0, input b: 1, input cin: 0, input op: 00, got: 0, expected: 00
+# test: input a: 1, input b: 0, input cin: 1, input op: 00, got: 0, expected: 00
+# test: input a: 0, input b: 0, input cin: 1, input op: 00, got: 0, expected: 00
+# test: input a: 1, input b: 1, input cin: 1, input op: 00, got: 1, expected: 01
+# test: input a: 0, input b: 1, input cin: 1, input op: 00, got: 0, expected: 00
+# test: input a: 1, input b: 0, input cin: 0, input op: 01, got: 1, expected: 01
+# test: input a: 0, input b: 0, input cin: 0, input op: 01, got: 0, expected: 00
+# test: input a: 1, input b: 1, input cin: 0, input op: 01, got: 1, expected: 01
+# test: input a: 0, input b: 1, input cin: 0, input op: 01, got: 1, expected: 01
+# test: input a: 1, input b: 0, input cin: 1, input op: 01, got: 1, expected: 01
+# test: input a: 0, input b: 0, input cin: 1, input op: 01, got: 0, expected: 00
+# test: input a: 1, input b: 1, input cin: 1, input op: 01, got: 1, expected: 01
+# test: input a: 0, input b: 1, input cin: 1, input op: 01, got: 1, expected: 01
+# test: input a: 1, input b: 0, input cin: 0, input op: 10, got: 1, expected: 01
+# test: input a: 0, input b: 0, input cin: 0, input op: 10, got: 0, expected: 00
+# test: input a: 1, input b: 1, input cin: 0, input op: 10, got: 0, expected: 10
+# test: input a: 0, input b: 1, input cin: 0, input op: 10, got: 1, expected: 01
+# test: input a: 1, input b: 0, input cin: 1, input op: 10, got: 0, expected: 10
+# test: input a: 0, input b: 0, input cin: 1, input op: 10, got: 1, expected: 01
+# test: input a: 1, input b: 1, input cin: 1, input op: 10, got: 1, expected: 11
+# test: input a: 0, input b: 1, input cin: 1, input op: 10, got: 0, expected: 10
+# test: input a: 1, input b: 0, input cin: 0, input op: 11, got: 0, expected: x0
+# test: input a: 0, input b: 0, input cin: 0, input op: 11, got: 0, expected: x0
+# test: input a: 1, input b: 1, input cin: 0, input op: 11, got: 0, expected: x0
+# test: input a: 0, input b: 1, input cin: 0, input op: 11, got: 0, expected: x0
+# test: input a: 1, input b: 0, input cin: 1, input op: 11, got: 0, expected: x0
+# test: input a: 0, input b: 0, input cin: 1, input op: 11, got: 0, expected: x0
+# test: input a: 1, input b: 1, input cin: 1, input op: 11, got: 0, expected: x0
+# test: input a: 0, input b: 1, input cin: 1, input op: 11, got: 0, expected: x0
+# Success
+# ** Note: $stop    : C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU_tb.v(82)
+#    Time: 330 ns  Iteration: 0  Instance: /one_bit_ALU_tb
+# Break in Module one_bit_ALU_tb at C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU_tb.v line 82
+# End time: 13:38:04 on Sep 07,2026, Elapsed time: 0:04:52
+# Errors: 0, Warnings: 0

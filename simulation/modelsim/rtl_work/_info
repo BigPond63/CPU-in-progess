@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/ziggy/Documents/ECE2072/GENESIS/simulation/modelsim
+vfull_adder
+Z1 !s110 1788751966
+!i10b 1
+!s100 jm`fXM4iTLcC:d3=CNkG53
+I?l`S=N]IkfF6MADZQXR9L1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1788500540
+8C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v
+FC:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1788751966.000000
+!s107 C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v|
+!s90 -reportprogress|300|-work|work|C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vhalf_adder
+R1
+!i10b 1
+!s100 [Pj64M<Vb>ahcX?H>NL@U3
+IoJXJdb^]TY7@MHifeld9B3
+R2
+R0
+w1788499681
+8C:/Users/ziggy/Documents/ECE2072/GENESIS/half_adder.v
+FC:/Users/ziggy/Documents/ECE2072/GENESIS/half_adder.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/ziggy/Documents/ECE2072/GENESIS/half_adder.v|
+!s90 -reportprogress|300|-work|work|C:/Users/ziggy/Documents/ECE2072/GENESIS/half_adder.v|
+!i113 1
+R5
+R6
+vone_bit_ALU
+R1
+!i10b 1
+!s100 HF2QdZL5OkbfAQ2d>=K?j3
+IPZoEE28?lDOD>RN>n_E[00
+R2
+R0
+w1788750083
+8C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v
+FC:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v|
+!s90 -reportprogress|300|-work|work|C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v|
+!i113 1
+R5
+R6
+none_bit_@a@l@u
+vone_bit_ALU_tb
+R1
+!i10b 1
+!s100 jQO6?nR:HZmGHTbPDz[?b2
+IOEGOC[^`8SVKE?U89Pk[d0
+R2
+R0
+w1788751707
+8C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU_tb.v
+FC:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU_tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU_tb.v|
+!i113 1
+R5
+R6
+none_bit_@a@l@u_tb

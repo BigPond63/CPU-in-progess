@@ -1,5 +1,5 @@
-Analysis & Synthesis report for GENESIS
-Sat Sep 05 13:39:07 2026
+Analysis & Elaboration report for GENESIS
+Mon Sep 07 13:28:44 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,10 +7,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "full_adder:ins0"
+  6. Analysis & Elaboration Messages
 
 
 
@@ -34,12 +35,12 @@ refer to the applicable agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sat Sep 05 13:39:07 2026           ;
+; Analysis & Elaboration Status      ; Successful - Mon Sep 07 13:28:44 2026       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GENESIS                                     ;
-; Top-level Entity Name              ; GENESIS                                     ;
+; Top-level Entity Name              ; one_bit_ALU                                 ;
 ; Family                             ; MAX 10                                      ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -55,13 +56,29 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; GENESIS            ; GENESIS            ;
+; Top-level entity name                                            ; one_bit_ALU        ; GENESIS            ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -141,50 +158,48 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder:ins0"                                                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Sep 05 13:38:54 2026
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GENESIS -c GENESIS
+    Info: Processing started: Mon Sep 07 13:28:38 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GENESIS -c GENESIS --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
     Info (12023): Found entity 1: register_file File: C:/Users/ziggy/Documents/ECE2072/GENESIS/regFile.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file program_counter.v
     Info (12023): Found entity 1: program_counter File: C:/Users/ziggy/Documents/ECE2072/GENESIS/program_counter.v Line: 1
-Warning (10263): Verilog HDL Event Control warning at ALU.v(27): event expression contains "|" or "||" File: C:/Users/ziggy/Documents/ECE2072/GENESIS/ALU.v Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/ziggy/Documents/ECE2072/GENESIS/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file half_adder.v
     Info (12023): Found entity 1: half_adder File: C:/Users/ziggy/Documents/ECE2072/GENESIS/half_adder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.v
     Info (12023): Found entity 1: full_adder File: C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder32.v
-    Info (12023): Found entity 1: full_adder32 File: C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder32.v Line: 1
-Error (12007): Top-level design entity "GENESIS" is undefined
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
-    Error: Peak virtual memory: 4726 megabytes
-    Error: Processing ended: Sat Sep 05 13:39:07 2026
-    Error: Elapsed time: 00:00:13
-    Error: Total CPU time (on all processors): 00:00:23
+    Info (12023): Found entity 1: full_adder32 File: C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder32.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file one_bit_alu.v
+    Info (12023): Found entity 1: one_bit_ALU File: C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file one_bit_alu_tb.v
+    Info (12023): Found entity 1: one_bit_ALU_tb File: C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU_tb.v Line: 3
+Info (12127): Elaborating entity "one_bit_ALU" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at one_bit_ALU.v(26): truncated value with size 2 to match size of target (1) File: C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v Line: 26
+Warning (10034): Output port "cout[0]" at one_bit_ALU.v(9) has no driver File: C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v Line: 9
+Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:ins0" File: C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v Line: 20
+Info (12128): Elaborating entity "half_adder" for hierarchy "full_adder:ins0|half_adder:ins0" File: C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v Line: 9
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4723 megabytes
+    Info: Processing ended: Mon Sep 07 13:28:44 2026
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:11
 
 

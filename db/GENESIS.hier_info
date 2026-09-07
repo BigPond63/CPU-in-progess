@@ -1,0 +1,36 @@
+|one_bit_ALU
+a[0] => a[0].IN1
+b[0] => b[0].IN1
+cin[0] => cin[0].IN1
+operation[0] => Mux0.IN4
+operation[1] => Mux0.IN3
+result[0] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] << <GND>
+
+
+|one_bit_ALU|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|one_bit_ALU|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|one_bit_ALU|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
