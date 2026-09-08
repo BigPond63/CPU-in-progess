@@ -1,7 +1,7 @@
 module one_bit_ALU (
 	input [0:0] a,
 	input [0:0] b,  
-	input [0:0] cin, // b-invert
+	input [0:0] cin, // b-invert for cin[0]
 	input [2:0] operation,
 	input [0:0] a_invert,
 	input [0:0] b_invert,

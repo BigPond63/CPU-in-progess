@@ -1,17 +1,128 @@
-|one_bit_ALU
+|ALU_chained
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+cin[0] => cin[0].IN33
+operation[0] => operation[0].IN32
+operation[1] => operation[1].IN32
+operation[2] => operation[2].IN32
+a_invert[0] => a_invert[0].IN32
+result[0] <= one_bit_ALU:label[0].ins0.result
+result[1] <= one_bit_ALU:label[1].ins0.result
+result[2] <= one_bit_ALU:label[2].ins0.result
+result[3] <= one_bit_ALU:label[3].ins0.result
+result[4] <= one_bit_ALU:label[4].ins0.result
+result[5] <= one_bit_ALU:label[5].ins0.result
+result[6] <= one_bit_ALU:label[6].ins0.result
+result[7] <= one_bit_ALU:label[7].ins0.result
+result[8] <= one_bit_ALU:label[8].ins0.result
+result[9] <= one_bit_ALU:label[9].ins0.result
+result[10] <= one_bit_ALU:label[10].ins0.result
+result[11] <= one_bit_ALU:label[11].ins0.result
+result[12] <= one_bit_ALU:label[12].ins0.result
+result[13] <= one_bit_ALU:label[13].ins0.result
+result[14] <= one_bit_ALU:label[14].ins0.result
+result[15] <= one_bit_ALU:label[15].ins0.result
+result[16] <= one_bit_ALU:label[16].ins0.result
+result[17] <= one_bit_ALU:label[17].ins0.result
+result[18] <= one_bit_ALU:label[18].ins0.result
+result[19] <= one_bit_ALU:label[19].ins0.result
+result[20] <= one_bit_ALU:label[20].ins0.result
+result[21] <= one_bit_ALU:label[21].ins0.result
+result[22] <= one_bit_ALU:label[22].ins0.result
+result[23] <= one_bit_ALU:label[23].ins0.result
+result[24] <= one_bit_ALU:label[24].ins0.result
+result[25] <= one_bit_ALU:label[25].ins0.result
+result[26] <= one_bit_ALU:label[26].ins0.result
+result[27] <= one_bit_ALU:label[27].ins0.result
+result[28] <= one_bit_ALU:label[28].ins0.result
+result[29] <= one_bit_ALU:label[29].ins0.result
+result[30] <= one_bit_ALU:label[30].ins0.result
+result[31] <= result[31].DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= one_bit_ALU:label[31].ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[0].ins0
 a[0] => arth_a.DATAA
 a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
-operation[0] => Mux0.IN4
-operation[1] => Mux0.IN3
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
 a_invert[0] => Decoder1.IN0
-result[0] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
-cout[0] << full_adder:ins0.cout
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
 
 
-|one_bit_ALU|full_adder:ins0
+|ALU_chained|one_bit_ALU:label[0].ins0|full_adder:ins0
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -19,7 +130,7 @@ sum <= half_adder:ins1.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|one_bit_ALU|full_adder:ins0|half_adder:ins0
+|ALU_chained|one_bit_ALU:label[0].ins0|full_adder:ins0|half_adder:ins0
 a[0] => cout.IN0
 a[0] => sum.IN0
 b[0] => cout.IN1
@@ -28,7 +139,1402 @@ cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
 sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|one_bit_ALU|full_adder:ins0|half_adder:ins1
+|ALU_chained|one_bit_ALU:label[0].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[1].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[1].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[1].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[1].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[2].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[2].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[2].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[2].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[3].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[3].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[3].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[3].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[4].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[4].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[4].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[4].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[5].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[5].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[5].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[5].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[6].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[6].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[6].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[6].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[7].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[7].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[7].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[7].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[8].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[8].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[8].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[8].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[9].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[9].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[9].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[9].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[10].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[10].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[10].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[10].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[11].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[11].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[11].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[11].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[12].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[12].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[12].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[12].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[13].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[13].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[13].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[13].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[14].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[14].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[14].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[14].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[15].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[15].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[15].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[15].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[16].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[16].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[16].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[16].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[17].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[17].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[17].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[17].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[18].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[18].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[18].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[18].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[19].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[19].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[19].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[19].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[20].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[20].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[20].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[20].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[21].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[21].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[21].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[21].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[22].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[22].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[22].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[22].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[23].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[23].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[23].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[23].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[24].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[24].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[24].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[24].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[25].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[25].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[25].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[25].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[26].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[26].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[26].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[26].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[27].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[27].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[27].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[27].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[28].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[28].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[28].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[28].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[29].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[29].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[29].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[29].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[30].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[30].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[30].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[30].ins0|full_adder:ins0|half_adder:ins1
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[31].ins0
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
+cin[0] => cin[0].IN1
+operation[0] => Mux1.IN8
+operation[0] => Mux0.IN10
+operation[1] => Mux1.IN7
+operation[1] => Mux0.IN9
+operation[2] => Mux1.IN6
+operation[2] => Mux0.IN8
+a_invert[0] => Decoder1.IN0
+b_invert[0] => Decoder0.IN0
+less[0] => Mux1.IN9
+result[0] <= result[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= full_adder:ins0.cout
+
+
+|ALU_chained|one_bit_ALU:label[31].ins0|full_adder:ins0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:ins1.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[31].ins0|full_adder:ins0|half_adder:ins0
+a[0] => cout.IN0
+a[0] => sum.IN0
+b[0] => cout.IN1
+b[0] => sum.IN1
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_chained|one_bit_ALU:label[31].ins0|full_adder:ins0|half_adder:ins1
 a[0] => cout.IN0
 a[0] => sum.IN0
 b[0] => cout.IN1

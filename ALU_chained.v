@@ -23,24 +23,11 @@ generate
 			.operation(operation),
 			.a_invert(a_invert),
 			.b_invert(cin[0]),
-			.less(1'b0),
+			.less(i==0 ? result[31] : 1'b0), // for SLT, to change first bit to signed bit of 31st bit, one instance one driver only
 			.result(result[i]),
 			.cout(arth_cout[i+1])
 			);
 			
-		if (i == 31) begin // for SLT, to change first bit to signed bit of 31st bit
-			one_bit_ALU ins1 (
-				.a(a[0]),
-				.b(b[0]),
-				.cin(arth_cout[0]),
-				.operation(operation),
-				.a_invert(a_invert),
-				.b_invert(cin[0]),
-				.less(result[31]),
-				.result(result[0]),
-				.cout(arth_cout[1])
-				);
-		end
 	end
 endgenerate
 
