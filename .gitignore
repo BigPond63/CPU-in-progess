@@ -1,4 +1,7 @@
 db/
+incremental_db/
+simulation/modelsim/
+output_files/
 
 # Waveform dumps
 *.vcd
