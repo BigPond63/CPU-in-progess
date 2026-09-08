@@ -2,9 +2,9 @@ module one_bit_ALU (
 	input [0:0] a,
 	input [0:0] b,  
 	input [0:0] cin, // b-invert for cin[0]
-	input [2:0] operation,
 	input [0:0] a_invert,
-	input [0:0] b_invert,
+	input [0:0] b_negate,
+	input [1:0] base_op,
 	input [0:0] less,
 	
 	output reg [0:0] result, // set if result[31]
@@ -16,6 +16,7 @@ module one_bit_ALU (
 	reg [0:0] arth_a;
 	reg [0:0] arth_b;
 	
+	
 	full_adder ins0 (
 		.a(arth_a),
 		.b(arth_b),
@@ -25,7 +26,8 @@ module one_bit_ALU (
 	);
 	
 	always @(*) begin
-		case (b_invert)
+		
+		case (b_negate)
 			1'b0: arth_b <= b;
 			1'b1: arth_b <= ~b; // two's complement -> cin = 1 gives the +1
 		endcase
@@ -35,7 +37,14 @@ module one_bit_ALU (
 			1'b1: arth_a <= ~a;
 		endcase
 		
-		case (operation) 
+		// ALU control line = {a_invert, b_negate, base_op};
+		// 0000 AND
+		// 0001 OR
+		// 0010 ADD
+		// 0110 SUB
+		// 0111 SLT
+		// 1100 NOR
+		case (base_op) 
 			2'b00: result <= arth_a & arth_b; // and / NOR
 			2'b01: result <= arth_a | arth_b; // or / NAND
 			2'b10: result <= {arth_cout, arth_sum}; // add / sub -> cout will be truncated
