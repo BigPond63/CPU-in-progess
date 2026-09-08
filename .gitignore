@@ -1,0 +1,10 @@
+# Waveform dumps
+*.vcd
+*.fst
+*.ghw
+*.wlf
+
+# Sim build output
+work/
+transcript
+*.vstf
