@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY one_bit_ALU
+set_global_assignment -name TOP_LEVEL_ENTITY ALU_chained
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:24:14  SEPTEMBER 03, 2026"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -235,11 +235,11 @@ set_global_assignment -name VERILOG_FILE regFile.v
 set_global_assignment -name VERILOG_FILE program_counter.v
 set_global_assignment -name VERILOG_FILE half_adder.v
 set_global_assignment -name VERILOG_FILE full_adder.v
-set_global_assignment -name VERILOG_FILE full_adder32.v
 set_global_assignment -name VERILOG_FILE one_bit_ALU.v
 set_global_assignment -name VERILOG_FILE one_bit_ALU_tb.v
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name VERILOG_FILE ALU_chained.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

@@ -1,11 +1,14 @@
 |one_bit_ALU
-a[0] => a[0].IN1
-b[0] => b[0].IN1
+a[0] => arth_a.DATAA
+a[0] => arth_a.DATAB
+b[0] => arth_b.DATAA
+b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
 operation[0] => Mux0.IN4
 operation[1] => Mux0.IN3
-result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-cout[0] <= full_adder:ins0.cout
+a_invert[0] => Decoder1.IN0
+result[0] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] << full_adder:ins0.cout
 
 
 |one_bit_ALU|full_adder:ins0

@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Mon Sep 07 16:46:53 2026
+Analysis & Elaboration Status : Failed - Tue Sep 08 12:50:29 2026
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : GENESIS
-Top-level Entity Name : one_bit_ALU
+Top-level Entity Name : ALU_chained
 Family : MAX 10
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge

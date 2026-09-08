@@ -1,5 +1,5 @@
 Flow report for GENESIS
-Mon Sep 07 16:46:53 2026
+Tue Sep 08 12:50:29 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,10 +40,10 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Sep 07 16:46:53 2026       ;
+; Flow Status                        ; Flow Failed - Tue Sep 08 12:50:29 2026      ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GENESIS                                     ;
-; Top-level Entity Name              ; one_bit_ALU                                 ;
+; Top-level Entity Name              ; ALU_chained                                 ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/07/2026 16:46:39 ;
+; Start date & time ; 09/08/2026 12:50:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; GENESIS             ;
 +-------------------+---------------------+
@@ -77,16 +77,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 58263121577733.178876359900976         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 58263121577733.178883581412620         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; one_bit_ALU ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; one_bit_ALU ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; one_bit_ALU ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; ALU_chained ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; ALU_chained ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; ALU_chained ; Top            ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; one_bit_ALU                            ; GENESIS       ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; ALU_chained                            ; GENESIS       ; --          ; --             ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
@@ -95,8 +95,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:15     ; 1.0                     ; 4723 MB             ; 00:00:27                           ;
-; Total                  ; 00:00:15     ; --                      ; --                  ; 00:00:27                           ;
+; Analysis & Elaboration ; 00:00:16     ; 1.0                     ; 4719 MB             ; 00:00:30                           ;
+; Total                  ; 00:00:16     ; --                      ; --                  ; 00:00:30                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
