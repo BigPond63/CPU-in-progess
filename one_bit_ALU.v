@@ -27,15 +27,10 @@ module one_bit_ALU (
 	
 	always @(*) begin
 		
-		case (b_negate)
-			1'b0: arth_b <= b;
-			1'b1: arth_b <= ~b; // two's complement -> cin = 1 gives the +1
-		endcase
-			
-		case (a_invert)
-			1'b0: arth_a <= a;
-			1'b1: arth_a <= ~a;
-		endcase
+		arth_a = a_invert ? ~a : a;
+	
+		arth_b = b_negate ? ~b : b; // two's complement -> cin = 1 gives the +1
+		
 		
 		// ALU control line = {a_invert, b_negate, base_op};
 		// 0000 AND

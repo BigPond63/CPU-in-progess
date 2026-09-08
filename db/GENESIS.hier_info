@@ -68,40 +68,40 @@ operation[0] => operation[0].IN32
 operation[1] => operation[1].IN32
 operation[2] => operation[2].IN32
 a_invert[0] => a_invert[0].IN32
-result[0] <= one_bit_ALU:label[0].ins0.result
-result[1] <= one_bit_ALU:label[1].ins0.result
-result[2] <= one_bit_ALU:label[2].ins0.result
-result[3] <= one_bit_ALU:label[3].ins0.result
-result[4] <= one_bit_ALU:label[4].ins0.result
-result[5] <= one_bit_ALU:label[5].ins0.result
-result[6] <= one_bit_ALU:label[6].ins0.result
-result[7] <= one_bit_ALU:label[7].ins0.result
-result[8] <= one_bit_ALU:label[8].ins0.result
-result[9] <= one_bit_ALU:label[9].ins0.result
-result[10] <= one_bit_ALU:label[10].ins0.result
-result[11] <= one_bit_ALU:label[11].ins0.result
-result[12] <= one_bit_ALU:label[12].ins0.result
-result[13] <= one_bit_ALU:label[13].ins0.result
-result[14] <= one_bit_ALU:label[14].ins0.result
-result[15] <= one_bit_ALU:label[15].ins0.result
-result[16] <= one_bit_ALU:label[16].ins0.result
-result[17] <= one_bit_ALU:label[17].ins0.result
-result[18] <= one_bit_ALU:label[18].ins0.result
-result[19] <= one_bit_ALU:label[19].ins0.result
-result[20] <= one_bit_ALU:label[20].ins0.result
-result[21] <= one_bit_ALU:label[21].ins0.result
-result[22] <= one_bit_ALU:label[22].ins0.result
-result[23] <= one_bit_ALU:label[23].ins0.result
-result[24] <= one_bit_ALU:label[24].ins0.result
-result[25] <= one_bit_ALU:label[25].ins0.result
-result[26] <= one_bit_ALU:label[26].ins0.result
-result[27] <= one_bit_ALU:label[27].ins0.result
-result[28] <= one_bit_ALU:label[28].ins0.result
-result[29] <= one_bit_ALU:label[29].ins0.result
-result[30] <= one_bit_ALU:label[30].ins0.result
-result[31] <= result[31].DB_MAX_OUTPUT_PORT_TYPE
-cout[0] <= one_bit_ALU:label[31].ins0.cout
-zero[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+result[0] << one_bit_ALU:label[0].ins0.result
+result[1] << one_bit_ALU:label[1].ins0.result
+result[2] << one_bit_ALU:label[2].ins0.result
+result[3] << one_bit_ALU:label[3].ins0.result
+result[4] << one_bit_ALU:label[4].ins0.result
+result[5] << one_bit_ALU:label[5].ins0.result
+result[6] << one_bit_ALU:label[6].ins0.result
+result[7] << one_bit_ALU:label[7].ins0.result
+result[8] << one_bit_ALU:label[8].ins0.result
+result[9] << one_bit_ALU:label[9].ins0.result
+result[10] << one_bit_ALU:label[10].ins0.result
+result[11] << one_bit_ALU:label[11].ins0.result
+result[12] << one_bit_ALU:label[12].ins0.result
+result[13] << one_bit_ALU:label[13].ins0.result
+result[14] << one_bit_ALU:label[14].ins0.result
+result[15] << one_bit_ALU:label[15].ins0.result
+result[16] << one_bit_ALU:label[16].ins0.result
+result[17] << one_bit_ALU:label[17].ins0.result
+result[18] << one_bit_ALU:label[18].ins0.result
+result[19] << one_bit_ALU:label[19].ins0.result
+result[20] << one_bit_ALU:label[20].ins0.result
+result[21] << one_bit_ALU:label[21].ins0.result
+result[22] << one_bit_ALU:label[22].ins0.result
+result[23] << one_bit_ALU:label[23].ins0.result
+result[24] << one_bit_ALU:label[24].ins0.result
+result[25] << one_bit_ALU:label[25].ins0.result
+result[26] << one_bit_ALU:label[26].ins0.result
+result[27] << one_bit_ALU:label[27].ins0.result
+result[28] << one_bit_ALU:label[28].ins0.result
+result[29] << one_bit_ALU:label[29].ins0.result
+result[30] << one_bit_ALU:label[30].ins0.result
+result[31] << one_bit_ALU:label[31].ins0.result
+zero[0] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+overflow[0] << overflow.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ALU_chained|one_bit_ALU:label[0].ins0
@@ -110,11 +110,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -151,11 +151,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -192,11 +192,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -233,11 +233,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -274,11 +274,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -315,11 +315,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -356,11 +356,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -397,11 +397,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -438,11 +438,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -479,11 +479,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -520,11 +520,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -561,11 +561,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -602,11 +602,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -643,11 +643,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -684,11 +684,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -725,11 +725,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -766,11 +766,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -807,11 +807,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -848,11 +848,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -889,11 +889,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -930,11 +930,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -971,11 +971,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -1012,11 +1012,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -1053,11 +1053,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -1094,11 +1094,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -1135,11 +1135,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -1176,11 +1176,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -1217,11 +1217,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -1258,11 +1258,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -1299,11 +1299,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -1340,11 +1340,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 
@@ -1381,11 +1381,11 @@ a[0] => arth_a.DATAB
 b[0] => arth_b.DATAA
 b[0] => arth_b.DATAB
 cin[0] => cin[0].IN1
+a_invert[0] => arth_a.OUTPUTSELECT
+b_negate[0] => arth_b.OUTPUTSELECT
 base_op[0] => Mux0.IN3
 base_op[1] => Mux0.IN2
-a_invert[0] => Decoder1.IN0
 less[0] => Mux0.IN4
-b_negate[0] => Decoder0.IN0
 result[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 cout[0] <= full_adder:ins0.cout
 

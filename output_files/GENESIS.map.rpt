@@ -1,5 +1,5 @@
-Analysis & Elaboration report for GENESIS
-Tue Sep 08 13:40:11 2026
+Analysis & Synthesis report for GENESIS
+Tue Sep 08 14:12:02 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,42 +7,50 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "one_bit_ALU:label[31].ins0"
-  6. Port Connectivity Checks: "one_bit_ALU:label[30].ins0"
-  7. Port Connectivity Checks: "one_bit_ALU:label[29].ins0"
-  8. Port Connectivity Checks: "one_bit_ALU:label[28].ins0"
-  9. Port Connectivity Checks: "one_bit_ALU:label[27].ins0"
- 10. Port Connectivity Checks: "one_bit_ALU:label[26].ins0"
- 11. Port Connectivity Checks: "one_bit_ALU:label[25].ins0"
- 12. Port Connectivity Checks: "one_bit_ALU:label[24].ins0"
- 13. Port Connectivity Checks: "one_bit_ALU:label[23].ins0"
- 14. Port Connectivity Checks: "one_bit_ALU:label[22].ins0"
- 15. Port Connectivity Checks: "one_bit_ALU:label[21].ins0"
- 16. Port Connectivity Checks: "one_bit_ALU:label[20].ins0"
- 17. Port Connectivity Checks: "one_bit_ALU:label[19].ins0"
- 18. Port Connectivity Checks: "one_bit_ALU:label[18].ins0"
- 19. Port Connectivity Checks: "one_bit_ALU:label[17].ins0"
- 20. Port Connectivity Checks: "one_bit_ALU:label[16].ins0"
- 21. Port Connectivity Checks: "one_bit_ALU:label[15].ins0"
- 22. Port Connectivity Checks: "one_bit_ALU:label[14].ins0"
- 23. Port Connectivity Checks: "one_bit_ALU:label[13].ins0"
- 24. Port Connectivity Checks: "one_bit_ALU:label[12].ins0"
- 25. Port Connectivity Checks: "one_bit_ALU:label[11].ins0"
- 26. Port Connectivity Checks: "one_bit_ALU:label[10].ins0"
- 27. Port Connectivity Checks: "one_bit_ALU:label[9].ins0"
- 28. Port Connectivity Checks: "one_bit_ALU:label[8].ins0"
- 29. Port Connectivity Checks: "one_bit_ALU:label[7].ins0"
- 30. Port Connectivity Checks: "one_bit_ALU:label[6].ins0"
- 31. Port Connectivity Checks: "one_bit_ALU:label[5].ins0"
- 32. Port Connectivity Checks: "one_bit_ALU:label[4].ins0"
- 33. Port Connectivity Checks: "one_bit_ALU:label[3].ins0"
- 34. Port Connectivity Checks: "one_bit_ALU:label[2].ins0"
- 35. Port Connectivity Checks: "one_bit_ALU:label[1].ins0"
- 36. Port Connectivity Checks: "one_bit_ALU:label[0].ins0"
- 37. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "one_bit_ALU:label[31].ins0"
+ 11. Port Connectivity Checks: "one_bit_ALU:label[30].ins0"
+ 12. Port Connectivity Checks: "one_bit_ALU:label[29].ins0"
+ 13. Port Connectivity Checks: "one_bit_ALU:label[28].ins0"
+ 14. Port Connectivity Checks: "one_bit_ALU:label[27].ins0"
+ 15. Port Connectivity Checks: "one_bit_ALU:label[26].ins0"
+ 16. Port Connectivity Checks: "one_bit_ALU:label[25].ins0"
+ 17. Port Connectivity Checks: "one_bit_ALU:label[24].ins0"
+ 18. Port Connectivity Checks: "one_bit_ALU:label[23].ins0"
+ 19. Port Connectivity Checks: "one_bit_ALU:label[22].ins0"
+ 20. Port Connectivity Checks: "one_bit_ALU:label[21].ins0"
+ 21. Port Connectivity Checks: "one_bit_ALU:label[20].ins0"
+ 22. Port Connectivity Checks: "one_bit_ALU:label[19].ins0"
+ 23. Port Connectivity Checks: "one_bit_ALU:label[18].ins0"
+ 24. Port Connectivity Checks: "one_bit_ALU:label[17].ins0"
+ 25. Port Connectivity Checks: "one_bit_ALU:label[16].ins0"
+ 26. Port Connectivity Checks: "one_bit_ALU:label[15].ins0"
+ 27. Port Connectivity Checks: "one_bit_ALU:label[14].ins0"
+ 28. Port Connectivity Checks: "one_bit_ALU:label[13].ins0"
+ 29. Port Connectivity Checks: "one_bit_ALU:label[12].ins0"
+ 30. Port Connectivity Checks: "one_bit_ALU:label[11].ins0"
+ 31. Port Connectivity Checks: "one_bit_ALU:label[10].ins0"
+ 32. Port Connectivity Checks: "one_bit_ALU:label[9].ins0"
+ 33. Port Connectivity Checks: "one_bit_ALU:label[8].ins0"
+ 34. Port Connectivity Checks: "one_bit_ALU:label[7].ins0"
+ 35. Port Connectivity Checks: "one_bit_ALU:label[6].ins0"
+ 36. Port Connectivity Checks: "one_bit_ALU:label[5].ins0"
+ 37. Port Connectivity Checks: "one_bit_ALU:label[4].ins0"
+ 38. Port Connectivity Checks: "one_bit_ALU:label[3].ins0"
+ 39. Port Connectivity Checks: "one_bit_ALU:label[2].ins0"
+ 40. Port Connectivity Checks: "one_bit_ALU:label[1].ins0"
+ 41. Port Connectivity Checks: "one_bit_ALU:label[0].ins0"
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
+ 45. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -66,45 +74,29 @@ refer to the applicable agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Tue Sep 08 13:40:11 2026       ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 08 14:12:02 2026       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GENESIS                                     ;
 ; Top-level Entity Name              ; ALU_chained                                 ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 149                                         ;
+;     Total combinational functions  ; 149                                         ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 103                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -187,6 +179,168 @@ refer to the applicable agreement for further details.
 ; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
 +------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                           ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
+; half_adder.v                     ; yes             ; User Verilog HDL File  ; C:/Users/ziggy/Documents/ECE2072/GENESIS/half_adder.v  ;         ;
+; full_adder.v                     ; yes             ; User Verilog HDL File  ; C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v  ;         ;
+; one_bit_ALU.v                    ; yes             ; User Verilog HDL File  ; C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v ;         ;
+; ALU_chained.v                    ; yes             ; User Verilog HDL File  ; C:/Users/ziggy/Documents/ECE2072/GENESIS/ALU_chained.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 149          ;
+;                                             ;              ;
+; Total combinational functions               ; 149          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 111          ;
+;     -- 3 input functions                    ; 2            ;
+;     -- <=2 input functions                  ; 36           ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 149          ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 0            ;
+;     -- Dedicated logic registers            ; 0            ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 103          ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; cin[0]~input ;
+; Maximum fan-out                             ; 68           ;
+; Total fan-out                               ; 659          ;
+; Average fan-out                             ; 1.86         ;
++---------------------------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                         ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                     ; Entity Name ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------+-------------+--------------+
+; |ALU_chained                    ; 149 (13)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 103  ; 0            ; 0          ; |ALU_chained                                                            ; ALU_chained ; work         ;
+;    |one_bit_ALU:label[0].ins0|  ; 5 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[0].ins0                                  ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[0].ins0|full_adder:ins0                  ; full_adder  ; work         ;
+;          |half_adder:ins1|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[0].ins0|full_adder:ins0|half_adder:ins1  ; half_adder  ; work         ;
+;    |one_bit_ALU:label[10].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[10].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[10].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[11].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[11].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[11].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[12].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[12].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[12].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[13].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[13].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[13].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[14].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[14].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[14].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[15].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[15].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[15].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[16].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[16].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[16].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[17].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[17].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[17].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[18].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[18].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[18].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[19].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[19].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[19].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[1].ins0|  ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[1].ins0                                  ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[1].ins0|full_adder:ins0                  ; full_adder  ; work         ;
+;    |one_bit_ALU:label[20].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[20].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[20].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[21].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[21].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[21].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[22].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[22].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[22].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[23].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[23].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[23].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[24].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[24].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[24].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[25].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[25].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[25].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[26].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[26].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[26].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[27].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[27].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[27].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[28].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[28].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[28].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[29].ins0| ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[29].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[29].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;    |one_bit_ALU:label[2].ins0|  ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[2].ins0                                  ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[2].ins0|full_adder:ins0                  ; full_adder  ; work         ;
+;    |one_bit_ALU:label[30].ins0| ; 6 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[30].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[30].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;          |half_adder:ins1|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[30].ins0|full_adder:ins0|half_adder:ins1 ; half_adder  ; work         ;
+;    |one_bit_ALU:label[31].ins0| ; 7 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[31].ins0                                 ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[31].ins0|full_adder:ins0                 ; full_adder  ; work         ;
+;          |half_adder:ins1|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[31].ins0|full_adder:ins0|half_adder:ins1 ; half_adder  ; work         ;
+;    |one_bit_ALU:label[3].ins0|  ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[3].ins0                                  ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[3].ins0|full_adder:ins0                  ; full_adder  ; work         ;
+;    |one_bit_ALU:label[4].ins0|  ; 6 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[4].ins0                                  ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[4].ins0|full_adder:ins0                  ; full_adder  ; work         ;
+;          |half_adder:ins1|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[4].ins0|full_adder:ins0|half_adder:ins1  ; half_adder  ; work         ;
+;    |one_bit_ALU:label[5].ins0|  ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[5].ins0                                  ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[5].ins0|full_adder:ins0                  ; full_adder  ; work         ;
+;    |one_bit_ALU:label[6].ins0|  ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[6].ins0                                  ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[6].ins0|full_adder:ins0                  ; full_adder  ; work         ;
+;    |one_bit_ALU:label[7].ins0|  ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[7].ins0                                  ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[7].ins0|full_adder:ins0                  ; full_adder  ; work         ;
+;    |one_bit_ALU:label[8].ins0|  ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[8].ins0                                  ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[8].ins0|full_adder:ins0                  ; full_adder  ; work         ;
+;    |one_bit_ALU:label[9].ins0|  ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[9].ins0                                  ; one_bit_ALU ; work         ;
+;       |full_adder:ins0|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU_chained|one_bit_ALU:label[9].ins0|full_adder:ins0                  ; full_adder  ; work         ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |ALU_chained|one_bit_ALU:label[31].ins0|Mux0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -508,14 +662,41 @@ refer to the applicable agreement for further details.
 +---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 103                         ;
+; cycloneiii_lcell_comb ; 150                         ;
+;     normal            ; 150                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 36                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 111                         ;
+;                       ;                             ;
+; Max LUT depth         ; 37.00                       ;
+; Average LUT depth     ; 23.68                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Sep 08 13:39:59 2026
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GENESIS -c GENESIS --analysis_and_elaboration
+    Info: Processing started: Tue Sep 08 14:11:44 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GENESIS -c GENESIS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
@@ -533,15 +714,31 @@ Info (12021): Found 1 design units, including 1 entities, in source file one_bit
 Info (12021): Found 1 design units, including 1 entities, in source file alu_chained.v
     Info (12023): Found entity 1: ALU_chained File: C:/Users/ziggy/Documents/ECE2072/GENESIS/ALU_chained.v Line: 1
 Info (12127): Elaborating entity "ALU_chained" for the top level hierarchy
-Info (12128): Elaborating entity "one_bit_ALU" for hierarchy "one_bit_ALU:label[0].ins0" File: C:/Users/ziggy/Documents/ECE2072/GENESIS/ALU_chained.v Line: 30
-Warning (10230): Verilog HDL assignment warning at one_bit_ALU.v(50): truncated value with size 2 to match size of target (1) File: C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v Line: 50
+Info (12128): Elaborating entity "one_bit_ALU" for hierarchy "one_bit_ALU:label[0].ins0" File: C:/Users/ziggy/Documents/ECE2072/GENESIS/ALU_chained.v Line: 35
+Warning (10230): Verilog HDL assignment warning at one_bit_ALU.v(45): truncated value with size 2 to match size of target (1) File: C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v Line: 45
 Info (12128): Elaborating entity "full_adder" for hierarchy "one_bit_ALU:label[0].ins0|full_adder:ins0" File: C:/Users/ziggy/Documents/ECE2072/GENESIS/one_bit_ALU.v Line: 26
 Info (12128): Elaborating entity "half_adder" for hierarchy "one_bit_ALU:label[0].ins0|full_adder:ins0|half_adder:ins0" File: C:/Users/ziggy/Documents/ECE2072/GENESIS/full_adder.v Line: 9
 Warning (12241): 32 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4723 megabytes
-    Info: Processing ended: Tue Sep 08 13:40:11 2026
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:21
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/ziggy/Documents/ECE2072/GENESIS/output_files/GENESIS.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "operation[2]" File: C:/Users/ziggy/Documents/ECE2072/GENESIS/ALU_chained.v Line: 5
+Info (21057): Implemented 252 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 69 input pins
+    Info (21059): Implemented 34 output pins
+    Info (21061): Implemented 149 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Tue Sep 08 14:12:02 2026
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:29
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/ziggy/Documents/ECE2072/GENESIS/output_files/GENESIS.map.smsg.
 
 
