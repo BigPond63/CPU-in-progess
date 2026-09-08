@@ -1,3 +1,5 @@
+db/
+
 # Waveform dumps
 *.vcd
 *.fst
